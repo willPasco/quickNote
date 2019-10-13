@@ -16,10 +16,6 @@ class MainActivity : AppCompatActivity(), MainView {
         presenter.attachView(this)
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
-
     override fun showData(data: String) {}
 
 }
