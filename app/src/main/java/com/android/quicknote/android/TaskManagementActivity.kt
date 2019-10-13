@@ -16,4 +16,9 @@ class TaskManagementActivity : AppCompatActivity(), TaskManagementView {
 
         presenter.attachView(this)
     }
+
+    override fun dbRequestSuccess() {}
+
+    override fun dbRequestError() {}
+
 }

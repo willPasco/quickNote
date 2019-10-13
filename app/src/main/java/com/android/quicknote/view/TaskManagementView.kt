@@ -5,4 +5,6 @@ import com.android.quicknote.base.BaseView
 interface TaskManagementView : BaseView {
 
     fun dbRequestSuccess()
+
+    fun dbRequestError()
 }

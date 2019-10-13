@@ -25,8 +25,16 @@ class TaskManagementPresenter : BasePresenter<TaskManagementView>() {
             if (dbResponse.code != null) {
                 if (dbResponse.code == QuickNoteDao.SUCCESS_CODE) {
                     view.dbRequestSuccess()
+                } else {
+                    onError()
                 }
+            } else {
+                onError()
             }
         }
+    }
+
+    private fun onError() {
+        view.dbRequestError()
     }
 }
