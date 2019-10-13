@@ -1,8 +1,8 @@
-package com.android.quicknote.repository
+package com.android.quicknote.data.repository
 
 import android.content.Context
-import com.android.quicknote.dao.QuickNoteDao
-import com.android.quicknote.db.QuickNoteDatabase
+import com.android.quicknote.data.dao.QuickNoteDao
+import com.android.quicknote.data.db.QuickNoteDatabase
 
 class MainRepository(context: Context) {
 

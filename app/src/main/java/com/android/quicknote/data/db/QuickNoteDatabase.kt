@@ -1,11 +1,11 @@
-package com.android.quicknote.db
+package com.android.quicknote.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.android.quicknote.dao.QuickNoteDao
-import com.android.TaskEntity
+import com.android.quicknote.data.dao.QuickNoteDao
+import com.android.quicknote.data.entity.TaskEntity
 
 @Database(entities = [TaskEntity::class], version = 1)
 abstract class QuickNoteDatabase : RoomDatabase() {

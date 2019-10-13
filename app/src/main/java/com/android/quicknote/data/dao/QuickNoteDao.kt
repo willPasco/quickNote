@@ -1,4 +1,4 @@
-package com.android.quicknote.dao
+package com.android.quicknote.data.dao
 
 import androidx.room.Dao
 

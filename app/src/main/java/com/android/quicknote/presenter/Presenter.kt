@@ -1,6 +1,6 @@
 package com.android.quicknote.presenter
 
-import com.android.quicknote.view.BaseView
+import com.android.quicknote.base.BaseView
 
 interface Presenter<T : BaseView> {
 
