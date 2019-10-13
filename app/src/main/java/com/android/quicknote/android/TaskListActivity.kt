@@ -7,17 +7,18 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.android.quicknote.R
 import com.android.quicknote.data.entity.TaskEntity
-import com.android.quicknote.presenter.MainPresenter
-import com.android.quicknote.view.MainView
+import com.android.quicknote.presenter.TaskListPresenter
+import com.android.quicknote.view.TaskListView
 
-class MainActivity : AppCompatActivity(), MainView {
+class TaskListActivity : AppCompatActivity(), TaskListView {
 
-    private val presenter = MainPresenter()
+    private val presenter = TaskListPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         presenter.attachView(this)
+        presenter.getAllTasks()
     }
 
     override fun showData(data: List<TaskEntity>?) {

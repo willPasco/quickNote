@@ -4,15 +4,15 @@ import android.content.Context
 import com.android.quicknote.base.BasePresenter
 import com.android.quicknote.data.dao.QuickNoteDao
 import com.android.quicknote.data.repository.TaskRepository
-import com.android.quicknote.view.MainView
+import com.android.quicknote.view.TaskListView
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class MainPresenter : BasePresenter<MainView>() {
+class TaskListPresenter : BasePresenter<TaskListView>() {
 
     private lateinit var repository: TaskRepository
 
-    override fun attachView(view: MainView) {
+    override fun attachView(view: TaskListView) {
         super.attachView(view)
         repository = TaskRepository(view as Context)
     }

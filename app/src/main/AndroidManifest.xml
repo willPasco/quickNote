@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".android.TaskManagementActivity"></activity>
-        <activity android:name=".android.MainActivity">
+        <activity android:name=".android.TaskListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -25,7 +25,7 @@ class TaskManagementPresenter : BasePresenter<TaskManagementView>() {
             val taskEntity = TaskEntity(timestamp, title)
 
             val dbResponse = repository!!.insertTask(taskEntity)
-            
+
             if (dbResponse.code != null) {
                 if (dbResponse.code == QuickNoteDao.SUCCESS_CODE) {
                     view.dbRequestSuccess()
