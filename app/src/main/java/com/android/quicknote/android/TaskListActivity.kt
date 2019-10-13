@@ -30,7 +30,8 @@ class TaskListActivity : AppCompatActivity(), TaskListView {
     override fun showData(taskList: List<TaskEntity>?) {
         Log.i("test", taskList.toString())
 
-        recycler_view.adapter = TaskListRecyclerAdapter(taskList)
+        if (!taskList.isNullOrEmpty())
+            recycler_view.adapter = TaskListRecyclerAdapter(taskList)
     }
 
     fun goToInsertScreen(view: View) {

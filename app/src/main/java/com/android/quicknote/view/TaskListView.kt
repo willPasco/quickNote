@@ -5,5 +5,5 @@ import com.android.quicknote.data.entity.TaskEntity
 
 interface TaskListView : BaseView {
 
-    fun showData(data: List<TaskEntity>?)
+    fun showData(taskList: List<TaskEntity>?)
 }
