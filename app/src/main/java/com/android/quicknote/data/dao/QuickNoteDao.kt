@@ -1,7 +1,9 @@
 package com.android.quicknote.data.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.Query
 import com.android.quicknote.data.entity.TaskEntity
 
 @Dao
@@ -14,4 +16,7 @@ interface QuickNoteDao {
 
     @Insert
     fun insertTask(taskEntity: TaskEntity)
+
+    @Query("SELECT * from task_table ORDER BY id ASC")
+    fun getAllTasks(): List<TaskEntity>
 }

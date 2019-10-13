@@ -1,7 +1,5 @@
 package com.android.quicknote.base
 
-import com.android.quicknote.presenter.Presenter
-
 open class BasePresenter<T : BaseView>:
     Presenter<T> {
 
