@@ -1,6 +1,8 @@
 package com.android.quicknote.android
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.android.quicknote.R
 import com.android.quicknote.presenter.MainPresenter
@@ -17,5 +19,10 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun showData(data: String) {}
+
+    fun goToInsertScreen(view: View) {
+        val intent = Intent(this, TaskManagementActivity::class.java)
+        startActivity(intent)
+    }
 
 }
