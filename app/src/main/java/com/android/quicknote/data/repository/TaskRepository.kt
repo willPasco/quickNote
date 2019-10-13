@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 class TaskRepository(context: Context) {
 
     companion object {
-        const val TAG = "TaskRepository"
+        private const val TAG = "TaskRepository"
     }
 
     private var dao: QuickNoteDao = QuickNoteDatabase.getDatabase(context).quickNoteDao()
