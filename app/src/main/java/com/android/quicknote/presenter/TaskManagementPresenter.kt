@@ -1,6 +1,7 @@
 package com.android.quicknote.presenter
 
 import android.content.Context
+import android.util.Log
 import com.android.quicknote.base.BasePresenter
 import com.android.quicknote.data.dao.QuickNoteDao
 import com.android.quicknote.data.entity.TaskEntity
@@ -18,9 +19,14 @@ class TaskManagementPresenter : BasePresenter<TaskManagementView>() {
         repository = TaskRepository(view as Context)
     }
 
-    fun insertTask(taskEntity: TaskEntity) {
+    fun insertTask(title: String) {
         GlobalScope.launch {
+            val timestamp = System.currentTimeMillis()/1000
+            val taskEntity = TaskEntity(timestamp, title)
+
             val dbResponse = repository!!.insertTask(taskEntity)
+
+            Log.i("test", dbResponse.toString())
 
             if (dbResponse.code != null) {
                 if (dbResponse.code == QuickNoteDao.SUCCESS_CODE) {
