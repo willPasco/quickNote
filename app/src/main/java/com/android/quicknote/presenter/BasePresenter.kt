@@ -1,17 +1,12 @@
 package com.android.quicknote.presenter
 
-import android.content.Context
-import com.android.quicknote.dao.QuickNoteDao
-import com.android.quicknote.repository.MainRepository
 import com.android.quicknote.view.BaseView
 
-open class BasePresenter {
+open class BasePresenter<T : BaseView>: Presenter<T> {
 
-    private var repository: MainRepository? = null
-    private lateinit var view: BaseView
+    open lateinit var view: T
 
-    fun attachView(view: BaseView) {
+    override fun attachView(view: T) {
         this.view = view
-        repository = MainRepository(view as Context)
     }
 }

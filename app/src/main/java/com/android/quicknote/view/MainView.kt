@@ -1,4 +1,6 @@
 package com.android.quicknote.view
 
-interface MainView: BaseView {
+interface MainView : BaseView {
+
+    fun showData(data: String)
 }
