@@ -12,7 +12,7 @@ import com.android.quicknote.android.adapter.TaskListRecyclerAdapter
 import com.android.quicknote.data.entity.TaskEntity
 import com.android.quicknote.presenter.TaskListPresenter
 import com.android.quicknote.view.TaskListView
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_task_list.*
 
 class TaskListActivity : AppCompatActivity(), TaskListView {
 
@@ -20,7 +20,7 @@ class TaskListActivity : AppCompatActivity(), TaskListView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_task_list)
         presenter.attachView(this)
         presenter.getAllTasks()
 
