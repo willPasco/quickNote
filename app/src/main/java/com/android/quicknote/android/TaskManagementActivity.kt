@@ -28,7 +28,8 @@ class TaskManagementActivity : AppCompatActivity(), TaskManagementView {
     fun saveRecord(view: View) {
 
         val taskTitle = edit_task_title.text.toString()
-        presenter.insertTask(taskTitle)
+        val taskDescription = edit_task_description.text.toString()
+        presenter.insertTask(taskTitle, taskDescription)
 
     }
 
