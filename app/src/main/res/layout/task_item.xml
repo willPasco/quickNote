@@ -5,36 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="110dp"
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true">
 
+        <View
+            android:id="@+id/view_task_priority"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@android:color/holo_green_dark" />
+
         <TextView
             android:id="@+id/text_view_task_title"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
             android:padding="16dp"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_task_priority"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Title" />
 
-        <TextView
-            android:id="@+id/text_view_task_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            android:textSize="12sp"
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.2"
+            android:background="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_view_task_title"
-            tools:text="00/00/0000 - 00:00" />
+            app:layout_constraintStart_toEndOf="@id/view_task_priority"
+            app:layout_constraintTop_toBottomOf="@id/text_view_task_title" />
+
+        <TextView
+            android:id="@+id/text_view_task_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_task_priority"
+            app:layout_constraintTop_toBottomOf="@id/view_separator"
+            tools:text="Its a so long description that don't fill in any space, because its so big than ever other note." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
