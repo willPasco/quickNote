@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="135dp"
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true">
@@ -20,7 +20,7 @@
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@android:color/holo_green_dark" />
+            android:background="@android:color/holo_green_dark" />
 
         <TextView
             android:id="@+id/text_view_task_title"
@@ -59,6 +59,17 @@
             app:layout_constraintStart_toEndOf="@id/view_task_priority"
             app:layout_constraintTop_toBottomOf="@id/view_separator"
             tools:text="Its a so long description that don't fill in any space, because its so big than ever other note." />
+
+        <TextView
+            android:id="@+id/text_view_task_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_task_description"
+            tools:text="Created in 00/00/0000" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
