@@ -2,7 +2,6 @@ package com.android.quicknote.android
 
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.android.quicknote.R
 import com.android.quicknote.presenter.TaskManagementPresenter
@@ -28,7 +27,7 @@ class TaskManagementActivity : AppCompatActivity(), TaskManagementView {
 
     fun saveRecord(view: View) {
 
-        val taskTitle = edit_text_task_title.text.toString()
+        val taskTitle = edit_task_title.text.toString()
         presenter.insertTask(taskTitle)
 
     }
